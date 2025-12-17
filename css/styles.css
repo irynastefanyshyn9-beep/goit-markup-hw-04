@@ -50,7 +50,9 @@ img {
 
 .page-header {
     border-bottom: 1px solid #e7e9fc;
-    box-shadow:0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.88);
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -157,6 +159,10 @@ img {
   url("../images/hero-bg.jpg");
   text-align: center;
   padding: 188px 0;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-title {
@@ -190,6 +196,8 @@ img {
     letter-spacing: 0.04em;
     color: #ffffff;
     cursor: pointer;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .primary-btn:hover,
@@ -367,6 +375,14 @@ img {
 .portfolio-item{
     width: calc((100% - 48px) / 3);
     background-color: #ffffff;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-item:hover {
+    box-shadow:
+        0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-item-content {
@@ -423,7 +439,6 @@ img {
 .portfolio-overlay {
     position: absolute;
     top: 0;
-    left: 0;
 
     width: 100%;
     height: 100%;
@@ -433,14 +448,15 @@ img {
     background-color: #4d5ae5;
     color:#f4f4fd;
 
+    font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+
     transform: translateY(100%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-link:hover .portfolio-overlay,
-.portfolio-link:focus .portfolio-overlay {
+.portfolio-item:hover .portfolio-overlay {
     transform: translateY(0)
 }
 
@@ -470,7 +486,7 @@ img {
 
 .footer-container {
     display: flex;
-    align-items:  baseline;
+    align-items: baseline;
 }
 
 .footer-left {
@@ -507,7 +523,7 @@ img {
     fill:#f4f4fd;
 }
 
-.footer-social-link:hiver,
+.footer-social-link:hover,
 .footer-social-link:focus {
     background-color: #31d0aa;
 }
