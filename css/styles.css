@@ -435,7 +435,7 @@ img {
 
 
 .portfolio-thumb {
-    position: relative;
+    position: absolute;
     overflow: hidden;
 }
 
