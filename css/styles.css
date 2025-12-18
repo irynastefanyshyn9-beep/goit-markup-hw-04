@@ -129,7 +129,6 @@ img {
 .contacts-link {
     display: block;
     padding: 24px 0;
-    gap: 40px;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -308,7 +307,6 @@ img {
     width: calc((100% - 72px) / 4);
     text-align: center;
     border-radius: 0 0 4px 4px;
-    padding-bottom: 32px;
 
     box-shadow:
     0px 1px 6px rgba(46, 47, 66, 0.08),
